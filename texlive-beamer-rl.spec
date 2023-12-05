@@ -1,6 +1,6 @@
 Name:		texlive-beamer-rl
-Version:	63668
-Release:	2
+Version:	65725
+Release:	1
 Summary:	Right to left presentation with beamer and babel
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamer-rl
