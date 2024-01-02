@@ -1,5 +1,5 @@
 Name:		texlive-beamer-rl
-Version:	65725
+Version:	69254
 Release:	1
 Summary:	Right to left presentation with beamer and babel
 Group:		Publishing
