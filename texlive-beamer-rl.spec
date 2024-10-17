@@ -3,7 +3,7 @@ Version:	69254
 Release:	1
 Summary:	Right to left presentation with beamer and babel
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/beamer-rl
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamer-rl
 License:	lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamer-rl.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamer-rl.doc.r%{version}.tar.xz
