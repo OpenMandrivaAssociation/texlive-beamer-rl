@@ -1,37 +1,24 @@
-Name:		texlive-beamer-rl
-Version:	69254
-Release:	1
+%global tl_name beamer-rl
+%global tl_revision 76587
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	2
+Release:	%{tl_revision}.1
 Summary:	Right to left presentation with beamer and babel
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/beamer-rl
+URL:		https://www.ctan.org/tex-archive/macros/luatex/latex/beamer-rl
 License:	lppl1.3c
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamer-rl.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/beamer-rl.doc.r%{version}.tar.xz
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamer-rl.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/beamer-rl.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-This class provides patches of some beamer templates and
-commands for presentation from right to left. It requires Babel
-with the LuaTeX engine.
+This class provides patches of some beamer templates and commands for
+presentation from right to left. It requires Babel with the LuaTeX
+engine.
 
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-rm -rf tlpkg
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -a * %{buildroot}%{_texmfdistdir}
-
-%files
-%{_texmfdistdir}/tex/lualatex/beamer-rl
-%doc %{_texmfdistdir}/doc/lualatex/beamer-rl
-
-%post -p %{_sbindir}/texlive.post
-
-%postun
-[ "$1" -eq 0 ] && %{_sbindir}/texlive.post
