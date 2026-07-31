@@ -1,9 +1,9 @@
 %global tl_name beamer-rl
-%global tl_revision 76587
+%global tl_revision 79762
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	2
+Version:	2.1
 Release:	%{tl_revision}.1
 Summary:	Right to left presentation with beamer and babel
 Group:		Publishing
